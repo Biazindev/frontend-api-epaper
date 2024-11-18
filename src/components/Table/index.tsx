@@ -6,6 +6,7 @@ import view from '../../assets/view.png'
 import trash from '../../assets/trash.png'
 import Button from '../Button'
 
+
 const Table = () => {
     const { data, error, isLoading } = useFetchDocumentosQuery()
     const [openDropdown, setOpenDropdown] = useState<number | null>(null)

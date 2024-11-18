@@ -4,7 +4,7 @@ import { cores } from "../../styles"
 export const CardContainer = styled.div`
     width: 64px;
     position: absolute;  /* Fixando a posição em relação ao rodapé */
-    top: 14.6%; 
+    top: 11.5%; 
     transform: translateX(0%);  /* Ajuste para centralizar o elemento */
     z-index: 10;
     justify-content: start;
