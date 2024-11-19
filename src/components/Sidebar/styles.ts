@@ -3,19 +3,23 @@ import { cores } from "../../styles"
 
 export const CardContainer = styled.div`
     width: 64px;
-    position: absolute;  /* Fixando a posição em relação ao rodapé */
-    top: 11.5%; 
-    transform: translateX(0%);  /* Ajuste para centralizar o elemento */
-    z-index: 10;
-    justify-content: start;
+    position: absolute;
+    top: 11.7%;
+    height: 106vh;
+    transform: translateX(0%);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     border: 1px solid ${cores.Neutral200};
-    height: 546px;
+    background-color: ${cores.Neutral0};
 
     > div {
         width: 32px;
         height: 32px;
         margin: 16px auto;
         padding: 8px;
+        display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 4px;
@@ -24,7 +28,23 @@ export const CardContainer = styled.div`
         img {
             width: 16px;
             height: 16px;
-            justify-content: center;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        display: none;
+    }
+
+    @media (max-width: 480px) {
+        width: 48px;
+        > div {
+            width: 24px;
+            height: 24px;
+
+            img {
+                width: 12px;
+                height: 12px;
+            }
         }
     }
 `

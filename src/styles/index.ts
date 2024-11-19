@@ -13,7 +13,8 @@ export const cores = {
   primary100: '#CAFFD6',
   primary500: '#05C151',
   primary600: '#079942',
-  primary400: '#45DD69'
+  primary400: '#45DD69',
+  primaryText: '#3A424E',
 }
 
 export const GlobalStyle = createGlobalStyle`

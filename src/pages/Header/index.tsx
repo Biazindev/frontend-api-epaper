@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <S.Container>
             <S.HeaderContainer>
-                <S.MenuIcon onClick={toggleMenu}>
+                <S.MenuIcon>
                     <img src={menu} alt="menu" />
                 </S.MenuIcon>
                 <S.LogoContainer>
@@ -47,7 +47,7 @@ const Header = () => {
                     </div>
                     <S.Avatar style={{ display: 'block' }}>
                         <p>Nome do usuário</p>
-                        <p style={{fontSize: '12px', margin: '2px', color: `${cores.Neutral500}`, fontWeight: 400,}}>Organização</p>
+                        <p style={{ fontSize: '12px', margin: '2px', color: `${cores.Neutral500}`, fontWeight: 400, }}>Organização</p>
                     </S.Avatar>
                     <img src={down} alt="down" />
                 </S.Detail>

@@ -4,6 +4,14 @@ import { cores } from "../../styles"
 export const Container = styled.div`
     display: flex;
     margin-left: 64px;
+
+    @media (max-width: 780px) {
+        margin-left: 0;
+    }
+
+    @media (max-width: 685px) {
+        display: block;
+    }
 `
 
 export const Documents = styled.div`
@@ -15,6 +23,13 @@ export const Documents = styled.div`
     justify-content: space-between;
     border-bottom: 1px solid ${cores.Neutral200};
     padding-bottom: 24px;
+
+    @media (max-width: 685px) {
+        display: block;
+        border-bottom: none;
+        margin: 16px;
+        padding-bottom: 24px;
+    }
     
     span {
         font-size: 24px;
@@ -38,6 +53,7 @@ export const Documents = styled.div`
         border: 1px solid ${cores.Neutral300};
         border-radius: 4px;
         margin-right: 16px;
+
 
         &::placeholder {
             padding-left: 16px;
@@ -63,11 +79,14 @@ export const Documents = styled.div`
         }
     }
 `
-
 export const InputContainer = styled.div`
     position: relative;
     width: 330px;
     height: 40px;
+
+    @media (max-width: 460px) {
+        width: 200px;
+        }
 
     img {
         position: absolute;
@@ -87,7 +106,10 @@ export const InputContainer = styled.div`
         outline: none;
         width: 330px;
         border: 1px solid ${cores.Neutral300};
-        
+
+        @media (max-width: 460px) {
+        width: 200px;
+        }
 
         &::placeholder {
             padding-left: 16px;
@@ -120,7 +142,15 @@ export const DocType = styled.div`
         border: none;
         cursor: pointer;
         border-radius: 4px;
+
+        @media (max-width: 780px) {
+        display: none;
     }
+    }
+        @media (max-width: 780px) {
+        padding: 16px;
+    }
+        
 `
 
 export const DocContainer = styled.div`
@@ -160,7 +190,21 @@ export const Adjuste = styled.div`
         width: 330px;
         height: 40px;
         border: 1px solid ${cores.Neutral300};
+
+        @media (max-width: 927px) {
+        width: 220px;
     }
+        @media (max-width: 500px) {
+        width: 140px;
+    }
+    }
+
+    @media (max-width: 780px) {
+        div {
+            display: block;
+        }
+    }
+
 `
 
 export const Sidebar = styled.div`
@@ -345,7 +389,7 @@ export const ModalTitle = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
   color: #333;
-`;
+`
 
 export const DocumentList = styled.div`
   width: 100%;
@@ -418,5 +462,119 @@ export const DocumentDetails = styled.p`
     color: #333;
   }
 `
+export const ModalCreate = styled.div`
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  label {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #555;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    &:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+
+  button.cancel {
+    background-color: #f44336;
+
+    &:hover {
+      background-color: #c62828;
+    }
+  }
+`
+
+export const ModalFooter = styled.div`
+    display:
+`
+export const ButtonContainer = styled.div`
+    display: none;
+   
+    @media (max-width: 780px) {
+        display: flex;
+        
+        button {
+        width: 56px;
+        height: 56px;
+        align-self: baseline;
+        background-color: #05C151;
+        color: #FFFF;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        position: absolute;
+        top: 500px;
+        right: 15px;
+        border-radius: 50%;
+        }
+    }
+`
+
 
 
